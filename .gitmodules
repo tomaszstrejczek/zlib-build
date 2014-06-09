@@ -1,0 +1,3 @@
+[submodule "orig"]
+	path = orig
+	url = http://myrepo2.cloudapp.net/tomek/zlib.git
