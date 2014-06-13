@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>zlib</id>
+    <version>1.2.8</version>
+    <authors>Garrett Serack</authors>
+    <owners>CoApp Project, Garrett Serack</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A sample library.</description>
+    <releaseNotes>First Release of MySample library</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <title>MySample Library</title>
+    <summary>A sample library</summary>
+    <tags>native, zlib</tags>
+  </metadata>
+  <files>
+    <file src="..\orig\zlib.h" target="\lib\native\include" />
+    <file src="..\orig\zconf.h" target="\lib\native\include" />
+    <file src="zlib.targets" target="\build\native\zlib.targets" />
+    <file src="..\orig\**\*.c" target="src" />
+    <file src="..\orig\**\*.h" target="src" />
+  </files>
+</package>
