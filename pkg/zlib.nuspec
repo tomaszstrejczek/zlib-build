@@ -24,7 +24,7 @@
     <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.lib" target="\lib\native\x86\debug" />
     <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.pdb" target="\lib\native\x86\debug" />
 
-    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.dll" target="\lib\native\x86\release" />
+    <!--<file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.dll" target="\lib\native\x86\release" />
     <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.lib" target="\lib\native\x86\release" />
     <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.pdb" target="\lib\native\x86\release" />
 
@@ -34,6 +34,6 @@
 
     <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllRelease\zlibwapi.dll" target="\lib\native\x64\release" />
     <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllRelease\zlibwapi.lib" target="\lib\native\x64\release" />
-    <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllRelease\zlibwapi.pdb" target="\lib\native\x64\release" />
+    <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllRelease\zlibwapi.pdb" target="\lib\native\x64\release" />-->
   </files>
 </package>

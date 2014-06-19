@@ -1,2 +1,4 @@
 zlib-build.opensdf
 zlib-build.sdf
+pkg/bin/
+.nuget/

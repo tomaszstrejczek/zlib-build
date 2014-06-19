@@ -1,0 +1,35 @@
+﻿<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+ 
+  <PropertyGroup Label="Packaging">
+    <PkgProjectPath>$(SolutionDir)/orig/contrib/vstudio/vc12/zlibvc.vcxproj</PkgProjectPath>
+    <PkgBinDir>$(MSBuildProjectDirectory)/../orig/contrib/vstudio/vc12</PkgBinDir>
+    <NuspecName>zlib.nuspec</NuspecName>
+    <PkgBaseName>zlib.1.2.8</PkgBaseName>
+  </PropertyGroup>
+
+  <Target Name="BuildAllConfigs">
+    <MSBuild Projects="$(PkgProjectPath)" Properties="Configuration=Debug;Platform=Win32"/>
+    <MSBuild Projects="$(PkgProjectPath)" Properties="Configuration=Release;Platform=Win32"/>
+    <MSBuild Projects="$(PkgProjectPath)" Properties="Configuration=Debug;Platform=x64"/>
+    <MSBuild Projects="$(PkgProjectPath)" Properties="Configuration=Release;Platform=x64"/>
+  </Target>
+
+  <Target Name="NugetPack" Inputs="$(PkgBinDir)/**/*" Outputs="$(MSBuildProjectDirectory)/bin/$(PkgBaseName).nupkg;$(MSBuildProjectDirectory)/bin/$(PkgBaseName).symbols.nupkg">
+    <MakeDir Directories="$(MSBuildProjectDirectory)/bin"/>
+    <Exec Command="$(MSBuildProjectDirectory)/../.nuget/nuget.exe pack $(NuspecName) -OutputDirectory $(MSBuildProjectDirectory)/bin -symbols" WorkingDirectory="$(MSBuildProjectDirectory)"/>
+  </Target>
+
+  <Target Name="Build" DependsOnTargets="BuildAllConfigs;NugetPack"/>
+  
+  <Target Name="Clean" />
+  <Target Name="Rebuild" />
+  
+  
+  <Target Name="Publish"/>
+  <Target Name="GetNativeManifest" />
+  <Target Name="GetCopyToOutputDirectoryItems" />
+
+  
+  <Target Name="AfterBuild" AfterTargets="Build" />
+
+</Project>
