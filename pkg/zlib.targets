@@ -3,7 +3,17 @@
   <ItemDefinitionGroup>
     <ClCompile>
       <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)..\..\lib\native\include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>ZLIB_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>ZLIB_WINAPI;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(MSBuildThisFileDirectory)..\..\lib\native\$(Platform)\$(Configuration)\zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>    
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <PkgTargetFiles Include="$(MSBuildThisFileDirectory)..\..\lib\native\$(Platform)\$(Configuration)\*.dll"/>
+    <PkgTargetFiles Include="$(MSBuildThisFileDirectory)..\..\lib\native\$(Platform)\$(Configuration)\*.pdb"/>
+  </ItemGroup>
+  <Target Name="AfterBuild">
+    <Copy SourceFiles="@(PkgTargetFiles)" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true"/>
+  </Target>
 </Project>

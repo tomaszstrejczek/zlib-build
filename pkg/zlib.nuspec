@@ -3,14 +3,16 @@
   <metadata>
     <id>zlib</id>
     <version>1.2.8</version>
-    <authors>Garrett Serack</authors>
-    <owners>CoApp Project, Garrett Serack</owners>
+    <authors>Jean-loup Gailly,Mark Adler </authors>
+    <owners>Tomek</owners>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>A sample library.</description>
-    <releaseNotes>First Release of MySample library</releaseNotes>
+    <description>zlib is designed to be a free, general-purpose, legally unencumbered -- that is, not covered by any patents -- lossless data-compression library for use on virtually any computer hardware and operating system. The zlib data format is itself portable across platforms. Unlike the LZW compression method used in Unix compress(1) and in the GIF image format, the compression method currently used in zlib essentially never expands the data. (LZW can double or triple the file size in extreme cases.) zlib's memory footprint is also independent of the input data and can be reduced, if necessary, at some cost in compression. A more precise, technical discussion of both points is available on another page.
+zlib was written by Jean-loup Gailly (compression) and Mark Adler (decompression). Jean-loup is also the primary author/maintainer of gzip(1), the author of the comp.compression FAQ list and the former maintainer of Info-ZIP's Zip; Mark is also the author of gzip's and UnZip's main decompression routines and was the original author of Zip. Not surprisingly, the compression algorithm used in zlib is essentially the same as that in gzip and Zip, namely, the `deflate' method that originated in PKWARE's PKZIP 2.x.
+    </description>
+    <releaseNotes>First my nuget release of zlib</releaseNotes>
     <copyright>Copyright 2013</copyright>
-    <title>MySample Library</title>
-    <summary>A sample library</summary>
+    <title>zlib library</title>
+    <summary>zlib library</summary>
     <tags>native, zlib</tags>
   </metadata>
   <files>
@@ -20,13 +22,13 @@
     <file src="..\orig\**\*.c" target="src" />
     <file src="..\orig\**\*.h" target="src" />
 
-    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.dll" target="\lib\native\x86\debug" />
-    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.lib" target="\lib\native\x86\debug" />
-    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.pdb" target="\lib\native\x86\debug" />
+    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.dll" target="\lib\native\Win32\debug" />
+    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.lib" target="\lib\native\Win32\debug" />
+    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllDebug\zlibwapi.pdb" target="\lib\native\Win32\debug" />
 
-    <!--<file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.dll" target="\lib\native\x86\release" />
-    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.lib" target="\lib\native\x86\release" />
-    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.pdb" target="\lib\native\x86\release" />
+    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.dll" target="\lib\native\Win32\release" />
+    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.lib" target="\lib\native\Win32\release" />
+    <file src="..\orig\contrib\vstudio\vc12\x86\ZlibDllRelease\zlibwapi.pdb" target="\lib\native\Win32\release" />
 
     <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllDebug\zlibwapi.dll" target="\lib\native\x64\debug" />
     <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllDebug\zlibwapi.lib" target="\lib\native\x64\debug" />
@@ -34,6 +36,6 @@
 
     <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllRelease\zlibwapi.dll" target="\lib\native\x64\release" />
     <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllRelease\zlibwapi.lib" target="\lib\native\x64\release" />
-    <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllRelease\zlibwapi.pdb" target="\lib\native\x64\release" />-->
+    <file src="..\orig\contrib\vstudio\vc12\x64\ZlibDllRelease\zlibwapi.pdb" target="\lib\native\x64\release" />
   </files>
 </package>
