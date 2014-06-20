@@ -19,7 +19,7 @@
     <Exec Command="$(MSBuildProjectDirectory)/../.nuget/nuget.exe pack $(NuspecName) -OutputDirectory $(MSBuildProjectDirectory)/bin -symbols" WorkingDirectory="$(MSBuildProjectDirectory)"/>
   </Target>
 
-  <Target Name="Build" DependsOnTargets="BuildAllConfigs;NugetPack"/>
+  <Target Name="Build" DependsOnTargets="BuildAllConfigs"/>
   
   <Target Name="Clean" />
   <Target Name="Rebuild" />
