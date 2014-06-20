@@ -1,7 +1,7 @@
 ﻿<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
  
   <PropertyGroup Label="Packaging">
-    <PkgProjectPath>$(SolutionDir)/orig/contrib/vstudio/vc12/zlibvc.vcxproj</PkgProjectPath>
+    <PkgProjectPath>$(MSBuildProjectDirectory)/../orig/contrib/vstudio/vc12/zlibvc.vcxproj</PkgProjectPath>
     <PkgBinDir>$(MSBuildProjectDirectory)/../orig/contrib/vstudio/vc12</PkgBinDir>
     <NuspecName>zlib.nuspec</NuspecName>
     <PkgBaseName>zlib.1.2.8</PkgBaseName>
